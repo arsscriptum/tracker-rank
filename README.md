@@ -1,4 +1,4 @@
-<center><img src="data/tracker_rank_banner.png" alt="banner"></center>
+<center><img src="doc/img/tracker_rank_banner.png" alt="banner"></center>
 
 # tracker-rank
 
@@ -46,7 +46,7 @@ You can run the powershell script [scripts/Get-LatestTrackers.ps1](scripts/Get-L
     udp://open.stealth.si:80/announce           valid     1         1.014596 seconds    Valid response
 ```
 
-<center><img src="data/sshot.png" alt="sshot"></center>
+<center><img src="doc/img/sshot.png" alt="sshot"></center>
 
 ## Combine with PowerShell cmdlets
 
@@ -71,7 +71,7 @@ last_tested   : 2/7/2025 10:30:53 AM
 
 ```
 
-<center><img src="data/shot2.png" alt="banner3"></center>
+<center><img src="doc/img/shot2.png" alt="banner3"></center>
 
 ## How to Build
 
@@ -106,7 +106,7 @@ If you want to build on the command line, you need some dependencies like [Build
 ```
 
 
-<center><img src="data/tracker_rank_logo1.png" alt="logo"></center>
+<center><img src="doc/img/tracker_rank_logo1.png" alt="logo"></center>
 
 
 ## Ranking Formula
