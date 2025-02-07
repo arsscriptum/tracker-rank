@@ -83,7 +83,7 @@ last_tested   : 2/7/2025 10:30:53 AM
 
 ### Visual Studio
 
-1. Clone [RateTorrentsTrackers](https://github.com/arsscriptum/tracker-rank.git)
+1. Clone [tracker-rank](https://github.com/arsscriptum/tracker-rank)
 1. Open and build ```tracker-rank.vcxproj```
 
 ### Scripts
@@ -91,7 +91,7 @@ last_tested   : 2/7/2025 10:30:53 AM
 If you want to build on the command line, you need some dependencies like [BuildAutomation](https://github.com/arsscriptum/BuildAutomation) and the [DejaInsight](https://github.com/arsscriptum/DejaInsight) projects. You are in luck though! I enjoy automation and I created a script to assist you n setting up the development environment: everything to put a smile on the lazy programmer's face!
 
 1. Create Development Directory, wich contains differents projects in addition to **BuildAutomation**
-1. Clone [RateTorrentsTrackers](https://github.com/arsscriptum/tracker-rank.git)
+1. Clone [tracker-rank](https://github.com/arsscriptum/tracker-rank)
 1. Setup the development environment using 
 
 ```powershell
@@ -112,7 +112,7 @@ If you want to build on the command line, you need some dependencies like [Build
 ```
 
 
-<center><img src="doc/img/tracker_rank_logo1.png" alt="logo"></center>
+<center><img src="doc/img/build.gif" alt="logo"></center>
 
 
 ## Ranking Formula
@@ -172,3 +172,7 @@ Quality Score = (Weight_Peers * Normalized_Peers) - (Weight_Latency * Normalized
    - Use the normalized values and weights in the formula.
 
 **I Implemented a first draft of this in the Get-RatedTrackers.ps1 powershell script**
+
+
+<center><img src="doc/img/tracker_rank_logo1.png" alt="logo"></center>
+
