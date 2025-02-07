@@ -8,7 +8,7 @@ A benchmarking tool for torrent trackers and indexers. Scores trackers based on 
 
 ## Purpose
 
-So you're like...  WHY? Well, the original idea was to have a way to rank trackers that I use with my [torrents search tool - torrents-tracker](https://github.com/arsscriptum/torrents-tracker). See, when I find torrents and pass them on to the download client (in my case, qbittorrentsvpn), I create a magnet link using trackers that I know. My trackers are in a database, I update them regularly, each time, upgrading the version, so I always create magnet links with latest trackers. **LATEST DOESN'T MEAN GOOD** A good tracker has ++ peers and -- latency. So the purpose here is use this tool to monitor my trackers, and rank them. In my DB i keep trackers and  their scores, so that ***I always use the  BEST ONES***
+So you're like...  WHY? Well, the original idea was to have a way to rank trackers that I use with my [torrents search tool - torrents-tracker](https://github.com/arsscriptum/torrents-tracker) or [here](https://github.com/arsscriptum/torrents-tracker-data) See, when I find torrents and pass them on to the download client (in my case, qbittorrentsvpn), I create a magnet link using trackers that I know. My trackers are in a database, I update them regularly, each time, upgrading the version, so I always create magnet links with latest trackers. **LATEST DOESN'T MEAN GOOD** A good tracker has ++ peers and -- latency. So the purpose here is use this tool to monitor my trackers, and rank them. In my DB i keep trackers and  their scores, so that ***I always use the  BEST ONES***
 
 ## The Source... where'd you get the trackers though?
 
