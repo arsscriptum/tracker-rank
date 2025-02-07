@@ -18,13 +18,17 @@ You can run the powershell script [scripts/Get-LatestTrackers.ps1](scripts/Get-L
 
 ### ***Command-line arguments***
 
-    Usage: tracker-rank [-h][-v][-n][-p] path [-t] tracker
-       -v          Verbose mode
-       -h          Help
-       -n          No banner
-       -d          download a list of trackers
-       -t tracker  test a single tracker url
-       -p path     path of the file containing all trackers
+```
+    Usage: trackers-ratings [-h][-v][-n][-p] path [-t] tracker
+       -v               Verbose mode
+       -h               Help
+       -n               No banner
+       -t               Timeout in seconds
+       -j, --json       Json  format
+       -i, --indexer    Rate Indexer
+       -u, --url        test a single tracker url
+       -p, --path       path of the file containing all trackers
+```
 
 ## Basic Usage
 
