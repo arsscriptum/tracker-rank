@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- General Environment values -->
+  <PropertyGroup Label="ServiceMacros">
+     <ProjectRoot>$(ProjectDir)..\</ProjectRoot>
+     <TempRoot>$(ProjectDir)</TempRoot>
+     <UsingQt5>0</UsingQt5>
+     <OPENSSL_LIB_64_MT>$(OPENSSL_LIB)\VC\x64\MT</OPENSSL_LIB_64_MT>
+     <LibCrypto_Lib_Static>libcrypto_static.lib</LibCrypto_Lib_Static>
+     <OpenSSL_Lib_Static>libssl_static.lib</OpenSSL_Lib_Static>
+     <SolutionRootDirectory>$(ProjectDir)..\</SolutionRootDirectory>
+     <ExternalDirectory>$(SolutionRootDirectory)external\</ExternalDirectory>
+     <SourcesDirectory>$(SolutionRootDirectory)src\</SourcesDirectory>
+     <ScriptsDirectory>$(SolutionRootDirectory)scripts\</ScriptsDirectory>
+     <ResourcesDirectory>$(SolutionRootDirectory)resources\</ResourcesDirectory>
+     <TmpBuildFilesRootDirectory>$(ProjectDir)obj\</TmpBuildFilesRootDirectory>
+     <BinariesDirectory>$(ProjectDir)bin\</BinariesDirectory>
+     <AppResourceFile>$(TmpBuildFilesRootDirectory)app_resource.qrc</AppResourceFile>
+  </PropertyGroup> 
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <CharacterSet>NotSet</CharacterSet>
+    <UseDebugLibraries>true</UseDebugLibraries>    
+  </PropertyGroup> 
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <CharacterSet>NotSet</CharacterSet>
+    <UseDebugLibraries>false</UseDebugLibraries>    
+  </PropertyGroup>   
+  <PropertyGroup Label="GeneralConfig">
+    <OutDir>$(BinariesDirectory)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(TmpBuildFilesRootDirectory)$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="WinsockConfig" Condition="'$(UsingWinsock)'=='1'">
+    <WinsockLib>wsock32.lib</WinsockLib>
+  </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(BOOST_ROOT);$(LIBTORRENT_INCLUDE);$(OPENSSL_INCLUDE);$(SourcesDirectory);$(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>$(OpenSSL_Defines);CCC_STATIC_LINKING;_CRT_SECURE_NO_WARNINGS;CC_WINAPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <!-- 
+        SUBSYSTEM; Console or Windows
+      -->
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(LIBTORRENT_LIB);$(OPENSSL_LIBDIR);$(OPENSSL_LIB);$(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libtry_signal.lib;Iphlpapi.lib;Crypt32.lib;libtorrent-rasterbar.lib;$(OpenSSL_Lib_Static);$(LibCrypto_Lib_Static);$(WinsockLib);shlwapi.lib;netapi32.lib;user32.lib;comctl32.lib</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>DEBUG;DEVELOPMENT;DEBUG_INFO;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>RELEASE;DEVELOPMENT;DEBUG_INFO;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='ReleasePList'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>RELEASE;DEVELOPMENT;DEBUG_INFO;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>  
+
+</Project>
+
+
+
+
+
