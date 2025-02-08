@@ -6,6 +6,8 @@ A benchmarking tool for torrent trackers and indexers. Scores trackers based on 
 
 **NOTE** just to be clear, i renamed my project recently so previous screen shots have different app name, Im pretty sure I did the whole  thing but i may have missed a spot.
 
+**NOTE2** just noticed I made this repository public, was going to change it but saw 50 clones in a single day. I'm not to big in making *unprofessional shit I do for fun* public, but considering the interest, i'll leave it public. Some stuff maybe be missing (like Buldautomation) though. If one **really** want other things, send me an email.
+
 ## Purpose
 
 So you're like...  WHY? Well, the original idea was to have a way to rank trackers that I use with my [torrents search tool - torrents-tracker](https://github.com/arsscriptum/torrents-tracker) or [here](https://github.com/arsscriptum/torrents-tracker-data) See, when I find torrents and pass them on to the download client (in my case, qbittorrentsvpn), I create a magnet link using trackers that I know. My trackers are in a database, I update them regularly, each time, upgrading the version, so I always create magnet links with latest trackers. **LATEST DOESN'T MEAN GOOD** A good tracker has ++ peers and -- latency. So the purpose here is use this tool to monitor my trackers, and rank them. In my DB i keep trackers and  their scores, so that ***I always use the  BEST ONES***
