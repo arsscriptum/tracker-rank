@@ -10,6 +10,16 @@ A benchmarking tool for torrent trackers and indexers. Scores trackers based on 
 
 So you're like...  WHY? Well, the original idea was to have a way to rank trackers that I use with my [torrents search tool - torrents-tracker](https://github.com/arsscriptum/torrents-tracker) or [here](https://github.com/arsscriptum/torrents-tracker-data) See, when I find torrents and pass them on to the download client (in my case, qbittorrentsvpn), I create a magnet link using trackers that I know. My trackers are in a database, I update them regularly, each time, upgrading the version, so I always create magnet links with latest trackers. **LATEST DOESN'T MEAN GOOD** A good tracker has ++ peers and -- latency. So the purpose here is use this tool to monitor my trackers, and rank them. In my DB i keep trackers and  their scores, so that ***I always use the  BEST ONES***
 
+### Next Steps
+
+This is a prototype, to see if ranking can be done and if I get something out of it. Were we go from here is I'll write a small windows of linux service that will do this in the background. That is:
+
+1. once or twice a day, fetch a list of trackers and make sure I have the latest in  my db.
+2. read the trackers in my database and rank them. do this for all versions of trackers, if an old tracker is now  onlne andof good quality, update the version anduse it.
+3. have the db  constently updated with ranked trackers.
+
+So when I use the my search tool, thething is **automagically always fast**. that's the theory of course. if I find time, i'll do this. It's a hobby
+
 ## The Source... where'd you get the trackers though?
 
 Yeah, initially, I get them from here: [https://cable.ayra.ch/tracker/index.php](https://cable.ayra.ch/tracker/index.php) and (same source) [https://github.com/ngosang/trackerslist](https://github.com/ngosang/trackerslist).
